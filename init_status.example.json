@@ -1,0 +1,19 @@
+{
+  "10.7.5.221_7455": {
+    "camera_ip": "rtsp://USERNAME:PASSWORD@10.7.5.221:554/Streaming/Channels/101",
+    "nvr_ip": "10.7.5.221",
+    "channel": 7455,
+    "algorithms": {
+      "Car_Detection": {
+        "conf": 0.5,
+        "alarmIntervalTime": 1
+      },
+      "Bag_Detection": {
+        "conf": 0.4,
+        "alarmIntervalTime": 1
+      }
+    },
+    "resolution_mode": "low",
+    "alarmIntervalTime": 1
+  }
+}

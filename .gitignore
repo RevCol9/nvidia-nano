@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+.env
+.Python
+
+# Runtime / local
+*.log
+save_video/
+edge_settings/
+.DS_Store
+Thumbs.db
+
+# Local camera config with credentials — use example instead
+init_status.json
+
+# Local archives
+*.zip
+Gstreamer/

@@ -1,0 +1,105 @@
+{
+
+  "algorithm_types": {
+
+    "car_detect": {
+
+      "framework": "yolo",
+
+      "weight_paths": {
+
+        "640": "algorithms/car/weights/car.pt",
+
+        "1088": "algorithms/car/weights/car.pt"
+
+      },
+
+      "engine_paths": {},
+
+      "image_size": 640,
+
+      "device": "cuda",
+
+      "interval": 1.0,
+
+      "postprocess_handler": "inference.shared_engine"
+
+    },
+
+    "bag_detect": {
+
+      "framework": "yolo",
+
+      "weight_paths": {
+
+        "640": "algorithms/bag/weights/bag.pt",
+
+        "1088": "algorithms/bag/weights/bag.pt"
+
+      },
+
+      "engine_paths": {},
+
+      "image_size": 640,
+
+      "device": "cuda",
+
+      "interval": 1.0,
+
+      "postprocess_handler": "inference.shared_engine"
+
+    }
+
+  },
+
+  "algorithms": {
+
+    "Car_Detection": {
+
+      "type": "car_detect",
+
+      "label": "scooter",
+
+      "label_zh": "车辆",
+
+      "draw_color": [255, 128, 0],
+
+      "report": {
+
+        "policy_type": "custom",
+
+        "module": "algorithms.car.report",
+
+        "class_name": "CarReport"
+
+      }
+
+    },
+
+    "Bag_Detection": {
+
+      "type": "bag_detect",
+
+      "label": "unattended_luggage",
+
+      "label_zh": "无人行李",
+
+      "draw_color": [0, 200, 255],
+
+      "report": {
+
+        "policy_type": "custom",
+
+        "module": "algorithms.bag.report",
+
+        "class_name": "BagReport"
+
+      }
+
+    }
+
+  }
+
+}
+
+
